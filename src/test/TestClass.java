@@ -1,24 +1,6 @@
 package test;
 
-import java.awt.SecondaryLoop;
-import java.util.List;
-import java.util.Arrays;
-import java.util.NoSuchElementException;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
-import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class TestClass {
 	
@@ -79,39 +61,6 @@ public class TestClass {
 		
 		driver.quit();	*/
 	}
-	public static ExpectedCondition<WebElement> visibilityOfAllElementsLocatedBy(final WebElement locator) {
-		return new ExpectedCondition<WebElement>() {
-			@Override
-			public WebElement apply(WebDriver driver) {
-				
-				try {
-					List<WebElement> elements = locator.findElements(By.xpath(".//tbody/tr"));
-					System.out.println(elements.size());
-					for (WebElement element : elements) {
-						String text = element.findElement(By.xpath("./td[1]")).getText();
-						System.out.println(text);
-						if (text.contains("Cris")) {
-							System.out.println("Entra");
-							return element;
-						}
-					}
-					driver.findElement(By.xpath("//input[@id='si' and @name='w']")).sendKeys("1");
 
-					// Si mientras está esperando encuentra un error, lanza
-					// excepción
-					
-
-				} catch (Exception e){
-					return null;
-				}
-				return null;
-			}
-
-			@Override
-			public String toString() {
-				return "visibility of any elements located by " + locator;
-			}
-		};
-	}
 }
 	
