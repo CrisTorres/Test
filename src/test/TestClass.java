@@ -17,9 +17,9 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.junit.Test;
-*/
-import static org.junit.Assert.*;
 
+import static org.junit.Assert.*;
+*/
 public class TestClass {
 	
 	public static void main(String[] args){
