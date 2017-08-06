@@ -1,5 +1,5 @@
 package test;
-
+/*
 import java.awt.SecondaryLoop;
 import java.util.List;
 import java.util.Arrays;
@@ -17,17 +17,16 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.junit.Test;
-
+*/
 import static org.junit.Assert.*;
 
 public class TestClass {
 	
-	@Test
 	public static void main(String[] args){
 		
 		System.out.println("Working");
 		
-		
+		/*
 		System.setProperty("webdriver.chrome.driver", "/Users/admin/Downloads/chromedriver");
 		//System.setProperty("webdriver.firefox.driver", "/Users/admin/Downloads/geckodriver");
 		//Applications/Firefox.app/Contents/MacOS/firefox-bin
@@ -35,7 +34,7 @@ public class TestClass {
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://www.facebook.com/");
-		/*
+		
 		WebElement table = driver.findElement(By.xpath("//table[@class='WRD']"));
 		
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
@@ -45,7 +44,7 @@ public class TestClass {
 		
 		Object hey = wait.until(visibilityOfAllElementsLocatedBy(table));
 		
-		*/
+		
 		driver.manage().window().maximize();
 		String parent_window = driver.getWindowHandle();
 		driver.switchTo().window(parent_window);
@@ -69,17 +68,19 @@ public class TestClass {
 		
 		Actions builder = new Actions(driver);
 		
-		/*
+		
 		WebElement link = driver.findElement(By.xpath("//*[@id='login_form']/table/tbody/tr[3]/td[2]/div/a"));
 
 		builder.keyDown(Keys.CONTROL)
 		.click(link)
 		.keyUp(Keys.CONTROL)
 		.build().perform();
-		*/
 		
 		driver.quit();	
+		*/
+		
 	}
+	/*
 	public static ExpectedCondition<WebElement> visibilityOfAllElementsLocatedBy(final WebElement locator) {
 		return new ExpectedCondition<WebElement>() {
 			@Override
@@ -114,5 +115,7 @@ public class TestClass {
 			}
 		};
 	}
+	*/
 }
+
 	
