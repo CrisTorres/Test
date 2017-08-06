@@ -23,6 +23,11 @@ import static org.junit.Assert.*;
 public class TestClass {
 	
 	public static void main(String[] args){
+		
+		System.out.println("Working");
+		return;
+		
+		/*
 		System.setProperty("webdriver.chrome.driver", "/Users/admin/Downloads/chromedriver");
 		//System.setProperty("webdriver.firefox.driver", "/Users/admin/Downloads/geckodriver");
 		//Applications/Firefox.app/Contents/MacOS/firefox-bin
@@ -30,7 +35,7 @@ public class TestClass {
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("http://www.wordreference.com/es/en/translation.asp?spen=eclipse");
-		/*
+		
 		WebElement table = driver.findElement(By.xpath("//table[@class='WRD']"));
 		
 		Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
@@ -70,9 +75,9 @@ public class TestClass {
 		.click(link)
 		.keyUp(Keys.CONTROL)
 		.build().perform();
-		*/
 		
-		driver.quit();
+		
+		driver.quit();	*/
 	}
 	public static ExpectedCondition<WebElement> visibilityOfAllElementsLocatedBy(final WebElement locator) {
 		return new ExpectedCondition<WebElement>() {
